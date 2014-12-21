@@ -21,9 +21,9 @@ subject_id: integer, 1:30
 
 activity_id: factor with 6 levels "WALKING" "WALKING_UPSTAIRS" "WALKING_DOWNSTAIRS" "SITTING" "STANDING" "LAYING" 
 
-feature: factor with 66 levels, see below
+feature: factor with 66 levels, see below for description
 
-mean: num
+mean: num, mean value of the feature
 
 ### Measures
 
@@ -66,6 +66,14 @@ fBodyGyroMag
 fBodyGyroJerkMag
 
 A full description of the variables can be found in features_info.txt
+
+### Transformations
+
+Prior to tidying, the dataset comprised of 10,299 observations of 68 variables. The variables were subject_id, activity_id, and each of the 66 features was set as it's own variable. The subjects have multiple measurements of each feature for each activity. Thus, there were two transformations to create the tidy data.
+
+-1 The values of each measurement for each subject and activity were collapsed to means, so each subject has only one measurement of each feature for each activity.
+
+-2 The features were gathered into one variable, taking the dataset from wide to long.
 
 ### Units
 

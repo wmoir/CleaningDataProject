@@ -10,7 +10,7 @@ library(tidyr)
 
 ## Set working directory to my directory for this course
 if (!file.exists("./datasciencecoursera/cleaning")) {dir.create("./datasciencecoursera/cleaning")}
-setwd("~/datasciencecoursea/cleaning")
+setwd("datasciencecoursera/cleaning/")
 
 ## download and unzip file to datasciencecoursera/cleaning dir
 fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
